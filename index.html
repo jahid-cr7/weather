@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <style>
+        .lato{
+            font-family: "Lato", sans-serif;
+        }
+        
+        
+    </style>
+    <title>Weather APP</title>
+</head>
+
+<body class="bg-[#323232] lato">
+    <section
+        class="w-4/5 max-w-[470px] bg-linear-to-r from-[#134e5e] to-[#71b280] mx-auto my-24 rounded-2xl p-9 text-center">
+        <nav>
+            <div  class="flex justify-around search">
+                <input class="bg-white w-3/4 p-4 rounded-2xl text-black outline-none" type="text" placeholder="Enter City Name"
+                    spellcheck="false">
+                <button class="bg-white px-4 rounded-full cursor-pointer">
+                    <img class="w-5 " src="./images/search.png" alt="">
+                </button>
+                
+            </div>
+            
+        </nav>
+
+        <div class="weather">
+            <div>
+                <img class="mx-auto mt-5 weather-icon w-36 mb-7" src="./images/mist.png" alt="">
+                <h1 id="temparature" class="text-white text-8xl text-center font-medium ">22° c</h1>
+                <h1 id="city-name" class="text-white text-6xl mt-3 text-center font-normal mb-12">Chengdu</h1>
+            </div>
+            <div class="flex justify-around text-white">
+                <div class="flex items-center">
+                    <div><img class="w-8 mr-3" src="./images/humidity.png" alt=""></div>
+                    <div>
+                        <h3 id="humidity-rate" class="w-4 text-lg">64%</h3>
+                        <h3 class="text-lg">Humidity</h3>
+                    </div>
+                </div>
+                <div class="flex items-center">
+                    <div><img class="w-8 mr-3" src="./images/wind.png" alt=""></div>
+                    <div>
+                        <h3 id="wind-speed" class="text-lg text-start">18 km/h</h3>
+                        <h3 class="text-lg">Wind Speed</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
