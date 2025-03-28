@@ -15,30 +15,25 @@ async function checkWeather(city) {
     Math.floor(data.main.temp) + "° c";
   document.getElementById("city-name").innerHTML = data.name;
   document.getElementById("humidity-rate").innerHTML = data.main.humidity + "%";
-  document.getElementById("wind-speed").innerHTML = data.wind.speed + " km/h";
+  //   document.getElementById("wind-speed").innerHTML = data.wind.speed + " km/h";
 
-    if(data.weather[0].main === 'Clouds'){
-        weatherIcon.src = "./images/clouds.png";
-    }else if(data.weather[0].main === 'Rain'){
-        weatherIcon.src = "./images/rain.png";
-    }else if(data.weather[0].main === 'Mist'){
-        weatherIcon.src = "./images/mist.png";
-    }
-    else if(data.weather[0].main === 'Drizzle'){
-        weatherIcon.src = "./images/drizzle.png";
-    }
-    else if(data.weather[0].main === 'Clear'){
-        weatherIcon.src = "./images/clear.png";
-    }
-    else if(data.weather[0].main === 'Haze'){
-        weatherIcon.src = "./images/humidity.png";
-    }
-    
-
-
+  if (data.weather[0].main === "Clouds") {
+    weatherIcon.src = "./images/clouds.png";
+  } else if (data.weather[0].main === "Rain") {
+    weatherIcon.src = "./images/rain.png";
+  } else if (data.weather[0].main === "Mist") {
+    weatherIcon.src = "./images/mist.png";
+  } else if (data.weather[0].main === "Drizzle") {
+    weatherIcon.src = "./images/drizzle.png";
+  } else if (data.weather[0].main === "Clear") {
+    weatherIcon.src = "./images/clear.png";
+  } else if (data.weather[0].main === "Haze") {
+    weatherIcon.src = "./images/haze.png";
+  }
+  document.querySelector(".weather").style.display = "block";
 }
 
-
-searchBtn.addEventListener('click', ()=>{
-    checkWeather(searchBox.value);
+searchBtn.addEventListener("click", (event) => {
+  event.preventDefault();
+  checkWeather(searchBox.value);
 });
